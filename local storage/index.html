@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+</head>
+<style>
+
+.container{
+   align-items: center;
+   margin-left: 400px;
+   margin-top: 200px;
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: rgb(32, 32, 32);
+   margin-right: 500px;
+   color: rgb(255, 255, 255);
+   border: 20px;
+   border-color: black;
+   padding: 50px 80px;
+   font-weight: 900;
+   font-size: 20px;
+}
+#btn{
+    padding: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    margin-left: 40px;
+ 
+    
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+</style>
+<body>
+    
+   
+    <div class="container">
+      <h1 style=" margin-left: 30px;   font-family: Arial, Helvetica, sans-serif;font-weight: 900;"><b>Sign in</b></h1>  
+        <label for="username">Name
+        <input type="text" placeholder="Enter Your Name" id="username" required>
+    </label><br>
+    <label for="useremail">Email
+    <input type="text" placeholder="Enter Your Mail" id="useremail" required>
+</label><br>
+<label for="userpassword">Password
+    <input type="text" placeholder="Enter Your Password" id="userpassword" required>
+</label><br><br>
+<a href="2index.html" >
+    <button onclick="Signin()" id="btn">Login in
+</a></button>
+</div>
+<script>
+   function Signin(){
+    let username = document.getElementById("username").value;
+    let useremail = document.getElementById("useremail").value;
+    let userpassword = document.getElementById("userpassword").value;
+    localStorage.setItem("username",username);
+    localStorage.setItem("useremail",useremail);
+    localStorage.setItem("userpassword",userpassword);
+    alert("You Sign In Successfully Now Login ");
+
+           let array =JSON.parse(localStorage.getItem("multipleuser"));
+           let objectuserdetail={
+            name: username,
+            email:useremail,
+            password:userpassword,
+           };
+  
+    
+
+
+
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

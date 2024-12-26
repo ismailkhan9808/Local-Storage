@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login in</title>
+</head>
+<style>
+.containr{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    padding: 20px 30px;
+    margin-top: 150px;
+    margin-left: 430px;
+    background-color: rgb(39, 39, 39);
+    margin-right: 600px;
+    justify-content: center;
+}
+h1{
+    font-size: 30px;
+    color: white;
+    margin-left: 40px;
+}
+button{
+    color: black;
+    font-weight: 900;
+    margin-left: 50px;
+}
+</style>
+<body>
+   <div class="containr">
+    <h1><b>Login</b></h1>
+    <label for="Email">
+      <input type="text" placeholder="Your Email" id="Email">
+    </label><br>
+<label for="Password">
+ <input type="text" placeholder="Email Password" id="Password">
+</label><br><br>
+<button onclick="login()">Login</button>
+</div>
+
+
+
+<script>
+
+let useremail = document.getElementById("Email").value;
+let storageEmail= localStorage.getItem("useremail");
+
+let userpassword = document.getElementById("Password").value;
+let storagePassword = document.getElementById("userpassword");
+
+if(useremail == storageEmail){
+    if(userpassword == storagePassword){
+        alert("You are Login Successfully! ")
+    }else{
+        alert("Incorrect UserPassword or UserName")
+}
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
